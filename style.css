@@ -1,0 +1,32 @@
+
+.logo img {
+    width: 172px;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    min-height: 64px;
+    justify-content: space-around;
+}
+
+
+.menu nav ul, .social ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu nav ul li, .social ul li {
+    margin: 0px 12px;
+}
+
+.menu, .social {
+    display: flex;
+    align-items: center;
+}
+
+.menu a, .social a {
+    text-decoration: none;
+    color: #0e0e0e;
+}
