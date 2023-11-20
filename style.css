@@ -106,17 +106,17 @@ section.jumbotron div.banner-pequeno {
     background: #fafafa;
 }
 
-section.jumbotron div.banner-pequeno h3 {
+section.jumbotron div.banner-pequeno h3, section.formulario h3 {
     font-size: 25px;
     line-height: 0;
 }
 
-section.jumbotron div.banner-pequeno p {
+section.jumbotron div.banner-pequeno p, section.formulario p {
     font-size: 18px;
     line-height: 22px;
 }
 
-section.jumbotron div.banner-pequeno button {
+section.jumbotron div.banner-pequeno button, section.formulario #form input[type="submit"] {
     background: transparent;
     border: 1px solid #0f0f0f;
     border-radius: 5px;
@@ -137,14 +137,72 @@ section.jumbotron div.banner-pequeno.dark h3 {
     
 }
 
-section.jumbotron div.banner-pequeno button:hover{
+section.jumbotron div.banner-pequeno button:hover, section.formulario #form input[type="submit"]:hover {
     background-color: #212529;
     color: #fefefe;
     border-color: #fefefe;
+    cursor: pointer;
 }
 
 section.jumbotron div.banner-pequeno.dark button:hover{
     background-color: #fefefe;
     color: #212529;
     border-color: #212529;
+}
+
+section.formulario form#form input {
+    width: 100%;
+    padding: 6px;
+    margin: 6px auto;
+}
+
+section.formulario form#form {
+    width: 25vw;
+    margin: 1rem auto;
+}
+
+section.formulario form#form input[type="submit"] {
+    width: 180px;
+    margin: 6px auto 6px 0px;
+}
+
+section.formulario h3, section.formulario p{ 
+    text-align: center;
+}
+
+footer div.espacamento {
+    width: 90%;
+    height: 44px;
+    border-bottom: 1px solid #adadadcc;
+    margin: 0px auto;
+}
+
+footer div.footer-interno {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 24px;
+    margin: 12px auto;
+    justify-content: space-around;
+    color: #7c7c7cd3;
+}
+
+footer div.footer-interno .footer-coluna-1 img{
+    width: 96px;
+}
+
+footer .footer-interno .footer-coluna ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer .footer-interno .footer-coluna ul li{
+    margin: 6px auto;
+}
+
+footer .footer-interno .footer-coluna ul li.titulo{
+    font-size: 22px;
+    font-weight: 800;
+    color: #363636;
 }
