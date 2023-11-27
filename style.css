@@ -49,6 +49,8 @@ section.banner {
 section.banner .conteudo {
     background-color: #7b08e53d;
     padding: 12px;
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 section.banner .botao {
@@ -57,6 +59,8 @@ section.banner .botao {
     padding: 16px;
     border-radius: 12px;
     cursor: pointer;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 section.sobre {
@@ -206,3 +210,17 @@ footer .footer-interno .footer-coluna ul li.titulo{
     font-weight: 800;
     color: #363636;
 }
+
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+@-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
