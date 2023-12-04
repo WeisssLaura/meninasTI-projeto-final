@@ -137,14 +137,14 @@ const footer = document.createElement("footer");
 // Adiciona conteúdo ao cabeçalho 
 header.innerHTML = `
     <h1>cabeçalho</h1>
-    <p>Este é o cabeçalho da página</p>
- `;
+    <p>Este é o cabeçalho da página.</p>
+`;
 
  // Adiciona conteúdo ao conteúdo 
  content.innerHTML = `
     <h2>conteúdo</h2>
     <p>Este é o conteúdo da pagina.</p>
- `;
+`;
  // Adiciona conteúdo ao rodapé
  footer.innerHTML = `
     <p>Rodapé</p>
@@ -154,6 +154,8 @@ header.innerHTML = `
 document.body.appendChild(header);
 document.body.appendChild(content);
 document.body.appendChild(footer);
+
+/****************************/
 
 //Aplica estilos ao cabeçalho 
 header.style.backgroundColor ="#ccc";
@@ -168,17 +170,30 @@ footer.style.backgroundColor = "#ccc";
 footer.style.padding = "10px";
 
 
+
 const container = document.querySelector("main");
 const linhas = [];
 const cores = ["#fff", "#ccc"];
 
 for (let i = 0; i < 10; i++) {
-    const linha = document.createElement("div");
-    linha.classList.add("linha");
-    linha.innerHTML = `
-    <h3>Linha ${i + 1}</h3> 
-    <p>Este é o conteúdo da linha ${i + 1}.</p>`
-    
+  const linha = document.createElement("div");
+  linha.classList.add("linha");
+  linha.innerHTML = `
+    <h3>Linha ${i + 1}</h3>
+    <p>Este é o conteúdo da linha ${i + 1}.</p>
+  `;
+  container.appendChild(linha);
+
+  linhas.push(linha);
 }
+// Alterna as cores das linhas
+function alternarCores() {
+  for (let i = 0; i < linhas.length; i++) {
+    linhas[i].style.backgroundColor = cores[i % 2];
+  }
+}
+alternarCores();
+// Define um evento para alternar as cores
+//container.addEventListener("click", alternarCores);
 
 
